@@ -117,7 +117,7 @@ table.tabla-camp tbody tr:hover { background: rgba(255,255,255,0.03); }
         <div class="brand-title"><i class="fa-solid fa-gears" style="color:var(--orange); margin-right:8px;"></i>Campañas de Cambio por Horómetro</div>
         <div class="brand-sub">VSR (Volvo Connect) · Flota Volvo FMX 8x4 R · STRACON Antamina</div>
     </div>
-    <span class="mono" style="font-size:0.72rem; color:var(--muted);">Generado: 2026-09-01 02:47:28</span>
+    <span class="mono" style="font-size:0.72rem; color:var(--muted);">Generado: 2026-09-01 03:11:07</span>
 </nav>
 
 <div class="container-camp">
@@ -576,7 +576,7 @@ document.getElementById('btnExportarPdfSim').addEventListener('click', () => {
     doc.setFontSize(9);
     const stockPdf = repuesto.stock_actual;
     const stockPdfTexto = (stockPdf !== null && stockPdf !== undefined) ? `${stockPdf.toLocaleString('es-PE')} unidad(es)` : 'sin dato';
-    doc.text(`Horómetro de cambio probado: ${intervalo.toLocaleString('es-PE')} hrs · Stock actual GDS: ${stockPdfTexto} · Generado: 2026-09-01 02:47:28 · STRACON Antamina`, 14, 21);
+    doc.text(`Horómetro de cambio probado: ${intervalo.toLocaleString('es-PE')} hrs · Stock actual GDS: ${stockPdfTexto} · Generado: 2026-09-01 03:11:07 · STRACON Antamina`, 14, 21);
     doc.setFontSize(8);
     doc.text('Simulación exploratoria: este componente no está guardado en Campanas_Repuestos_VSR.xlsx.', 14, 26);
 
@@ -624,7 +624,7 @@ document.getElementById('btnExportarPdf').addEventListener('click', () => {
     doc.setFontSize(9);
     const listaComponentes = componentes.map(c => `${c.descripcion} (${c.codigo} · ${c.intervalo_horas} hrs)`).join('; ');
     doc.text(`Componentes: ${listaComponentes}`, 14, 21);
-    doc.text(`Generado: 2026-09-01 02:47:28 · STRACON Antamina`, 14, 26);
+    doc.text(`Generado: 2026-09-01 03:11:07 · STRACON Antamina`, 14, 26);
 
     const head = ['Equipo', 'Tipo de flota', 'Horómetro actual', ...componentes.map(c => c.descripcion)];
     if (componentes.length > 1) head.push('Resumen');
